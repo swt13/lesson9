@@ -1,11 +1,11 @@
 /*
     Program Name:   Seminole Weather Channel
-    Author: 
-    Date: 
+    Author: Shane Thompson
+    Date: 4/25/16
     Filename:   apixu_forecast.js
 */
 
-/*  Section #4:  AJAX code to send the HTTP Request, which is the location the user specifies, to the 
+  Section #4:  AJAX code to send the HTTP Request, which is the location the user specifies, to the 
                  server.  If the HTTP Request is successfully processed by the APIXU server, the
                  data is retrieved and ONLY the data your application needs to display is pulled out
                  of the HTTP Response.  Our SEMINOLE WEATHER CHANNEL application will only pull out 
@@ -32,7 +32,7 @@
                  (https://www.apixu.com)
                  Use the following code as an example:
                    
-                     url: 'https://api.apixu.com/v1/forecast.json?key=ADD_YOUR_API_KEY_HERE',
+                     url: 'https://api.apixu.com/v1/forecast.json?key= 530fff28db894b42993215701162504',
                      
                      
                 IMPORTANT:  Before proceeding to Activity 2, save your Cloud9 workspace and preview this application 
@@ -68,14 +68,14 @@
         
                      $('#Day4Low').html("<center>" + json.forecast.forecastday[3].day.mintemp_f + "</center>");
                      $('#Day4High').html("<center>" + json.forecast.forecastday[3].day.maxtemp_f + "</center>");
-*/
+
 
         $(document).ready(function(){
            $(':button').click(function(){
                 var message = 'q=' + $('#searchValue').val()+'&days=3';   
                 $.ajax({
                       type: 'GET',
-                      url: 'https://api.apixu.com/v1/forecast.json?key=ADD_YOUR_API_KEY_HERE',
+                      url: 'https://api.apixu.com/v1/forecast.json?key= 530fff28db894b42993215701162504',
                       data: message             
                 })
                 .done(function(json){
